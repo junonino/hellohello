@@ -3,12 +3,12 @@
    2027 Editorial Agency Design System
    
    Color Strategy & Implementation Matrix:
-     - Main Background: #F9F8F3 (Soft Cream - Quiet Luxury / Grounded)
-     - Body Text / Headings: #1A2536 (Deep Slate Navy - Accessible High-Contrast)
-     - Primary Buttons / CTAs: #FF5A1F (Energy Orange - Digital Optimism Accent)
+     - Main Background: #d5ccc3 (Warm Sand / Grounded)
+     - Body Text / Headings: #070302 (Near Black - Accessible High-Contrast)
+     - Primary Buttons / CTAs: #b65127 (Warm Rust Accent)
      - Hyperlinks & Sub-branding: #1040E6 (Luminous Blue - 2027 Key Color Anchor)
      - Borders & Icons: #7C8D78 (Meadowland / Sage - Grounded Serenity)
-     - Structural Dividers: #E6E5E0 (Quiet Luxury Hairline Rules)
+     - Structural Dividers: #c4bab0 (Quiet Luxury Hairline Rules)
      - Card Backgrounds: #FFFFFF (Pure Studio White)
 
    Typography System:
@@ -18,15 +18,15 @@
 
 :root {
   /* 2027 Color Palette */
-  --bg-cream: #F9F8F3;
-  --text-navy: #1A2536;
+  --bg-cream: #d5ccc3;
+  --text-navy: #070302;
   --text-muted: #5C6A7E;
   --text-light: #7E8B9E;
   
-  --btn-orange: #FF5A1F;
-  --btn-orange-hover: #E04810;
-  --btn-orange-soft: rgba(255, 90, 31, 0.1);
-  --btn-orange-glow: rgba(255, 90, 31, 0.25);
+  --btn-orange: #b65127;
+  --btn-orange-hover: #9c431e;
+  --btn-orange-soft: rgba(182, 81, 39, 0.1);
+  --btn-orange-glow: rgba(182, 81, 39, 0.25);
 
   --blue-anchor: #1040E6;
   --blue-anchor-hover: #082FB3;
@@ -36,9 +36,9 @@
   --sage-soft: rgba(124, 141, 120, 0.12);
   --sage-border-subtle: rgba(124, 141, 120, 0.35);
 
-  --border-divider: #E6E5E0;
+  --border-divider: #c4bab0;
   --card-white: #FFFFFF;
-  --surface-cream-alt: #F2F0E8;
+  --surface-cream-alt: #cac1b7;
 
   /* Typography */
   --font-serif: 'Fraunces', Georgia, serif;
@@ -167,7 +167,7 @@ h4, h5, h6 {
 .badge-orange,
 .badge-accent {
   background: var(--btn-orange-soft);
-  border-color: rgba(255, 90, 31, 0.3);
+  border-color: rgba(182, 81, 39, 0.3);
   color: var(--btn-orange);
 }
 
@@ -195,7 +195,7 @@ h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Buttons (Energy Orange Accent #FF5A1F)
+   Buttons (Energy Rust Accent #b65127)
    ========================================================================== */
 .btn {
   display: inline-flex;
@@ -266,7 +266,7 @@ button.btn-secondary:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(249, 248, 243, 0.92);
+  background: rgba(213, 204, 195, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-divider);
 }
@@ -455,18 +455,18 @@ button.btn-secondary:hover {
   background: var(--card-white);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-divider);
-  box-shadow: 0 24px 55px -15px rgba(26, 37, 54, 0.12),
-              0 10px 25px -5px rgba(26, 37, 54, 0.05),
-              0 0 0 1px rgba(26, 37, 54, 0.04);
+  box-shadow: 0 24px 55px -15px rgba(7, 3, 2, 0.12),
+              0 10px 25px -5px rgba(7, 3, 2, 0.05),
+              0 0 0 1px rgba(7, 3, 2, 0.04);
   overflow: hidden;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .browser-mockup:hover {
   transform: translateY(-3px);
-  box-shadow: 0 30px 65px -15px rgba(26, 37, 54, 0.16),
-              0 14px 30px -5px rgba(26, 37, 54, 0.08),
-              0 0 0 1px rgba(26, 37, 54, 0.06);
+  box-shadow: 0 30px 65px -15px rgba(7, 3, 2, 0.16),
+              0 14px 30px -5px rgba(7, 3, 2, 0.08),
+              0 0 0 1px rgba(7, 3, 2, 0.06);
 }
 
 /* Browser Chrome */
@@ -840,7 +840,7 @@ button.btn-secondary:hover {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  background: rgba(26, 37, 54, 0.96);
+  background: rgba(7, 3, 2, 0.96);
   color: #FFFFFF;
   padding: 0.35rem 0.6rem;
   border-radius: 6px;
@@ -892,7 +892,7 @@ button.btn-secondary:hover {
   gap: 0.75rem;
   position: relative;
   background: linear-gradient(90deg, #FFFFFF 0%, #FAFAF7 100%);
-  box-shadow: 0 2px 8px rgba(26, 37, 54, 0.03);
+  box-shadow: 0 2px 8px rgba(7, 3, 2, 0.03);
 }
 
 .lane-info {
@@ -925,16 +925,16 @@ button.btn-secondary:hover {
   color: var(--text-muted);
 }
 
-/* Floating / Anchored Pink/Orange "Active System" Badge */
+/* Floating / Anchored Active System Badge */
 .reputation-active-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.35rem 0.8rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, rgba(255, 90, 31, 0.12) 0%, rgba(244, 63, 94, 0.14) 100%);
-  border: 1px solid rgba(255, 90, 31, 0.35);
-  box-shadow: 0 4px 12px rgba(255, 90, 31, 0.15);
+  background: linear-gradient(135deg, rgba(182, 81, 39, 0.12) 0%, rgba(244, 63, 94, 0.14) 100%);
+  border: 1px solid rgba(182, 81, 39, 0.35);
+  box-shadow: 0 4px 12px rgba(182, 81, 39, 0.15);
   flex-shrink: 0;
   transition: all var(--transition-fast);
   cursor: default;
@@ -942,31 +942,31 @@ button.btn-secondary:hover {
 
 .reputation-active-badge:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(255, 90, 31, 0.24);
-  border-color: rgba(255, 90, 31, 0.55);
+  box-shadow: 0 6px 18px rgba(182, 81, 39, 0.24);
+  border-color: rgba(182, 81, 39, 0.55);
 }
 
 .badge-pulse-indicator {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #FF5A1F;
-  box-shadow: 0 0 0 0 rgba(255, 90, 31, 0.6);
+  background: #b65127;
+  box-shadow: 0 0 0 0 rgba(182, 81, 39, 0.6);
   animation: orangePulse 2s infinite;
 }
 
 @keyframes orangePulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 90, 31, 0.7);
+    box-shadow: 0 0 0 0 rgba(182, 81, 39, 0.7);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 5px rgba(255, 90, 31, 0);
+    box-shadow: 0 0 0 5px rgba(182, 81, 39, 0);
   }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 90, 31, 0);
+    box-shadow: 0 0 0 0 rgba(182, 81, 39, 0);
   }
 }
 
@@ -975,7 +975,7 @@ button.btn-secondary:hover {
   font-size: 0.725rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #FF5A1F;
+  color: #b65127;
   text-transform: uppercase;
 }
 
@@ -1009,7 +1009,7 @@ button.btn-secondary:hover {
 
 .card-positive {
   border-top: 3px solid var(--btn-orange);
-  box-shadow: 0 10px 30px rgba(26, 37, 54, 0.04);
+  box-shadow: 0 10px 30px rgba(7, 3, 2, 0.04);
 }
 
 .comparison-card-header {
@@ -1127,7 +1127,7 @@ button.btn-secondary:hover {
 .bento-card:hover {
   transform: translateY(-3px);
   border-color: var(--sage-border);
-  box-shadow: 0 15px 35px rgba(26, 37, 54, 0.06);
+  box-shadow: 0 15px 35px rgba(7, 3, 2, 0.06);
 }
 
 /* Double-Width Signature Cornerstone Pillar */
@@ -1194,7 +1194,7 @@ button.btn-secondary:hover {
 .bento-card:hover .service-icon-wrap {
   background: var(--btn-orange-soft);
   color: var(--btn-orange);
-  border-color: rgba(255, 90, 31, 0.3);
+  border-color: rgba(182, 81, 39, 0.3);
 }
 
 .bento-card h3 {
@@ -1259,7 +1259,7 @@ button.btn-secondary:hover {
 .roadmap-step:hover {
   border-color: var(--sage-border);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(26, 37, 54, 0.05);
+  box-shadow: 0 10px 25px rgba(7, 3, 2, 0.05);
 }
 
 .step-marker {
@@ -1280,7 +1280,7 @@ button.btn-secondary:hover {
 .step-marker-accent {
   background: var(--btn-orange-soft);
   color: var(--btn-orange);
-  border-color: rgba(255, 90, 31, 0.3);
+  border-color: rgba(182, 81, 39, 0.3);
 }
 
 .roadmap-step h3 {
@@ -1372,7 +1372,7 @@ button.btn-secondary:hover {
   border: 1px solid var(--border-divider);
   border-radius: var(--radius-md);
   padding: 2.5rem;
-  box-shadow: 0 20px 45px -10px rgba(26, 37, 54, 0.08);
+  box-shadow: 0 20px 45px -10px rgba(7, 3, 2, 0.08);
 }
 
 .magnet-form {
@@ -1553,7 +1553,7 @@ button.btn-secondary:hover {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(26, 37, 54, 0.6);
+  background: rgba(7, 3, 2, 0.6);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -1579,7 +1579,7 @@ button.btn-secondary:hover {
   width: 100%;
   text-align: center;
   position: relative;
-  box-shadow: 0 25px 60px rgba(26, 37, 54, 0.15);
+  box-shadow: 0 25px 60px rgba(7, 3, 2, 0.15);
   transform: translateY(15px);
   transition: transform var(--transition-fast);
 }

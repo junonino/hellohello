@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.top = '80px';
         navLinks.style.left = '0';
         navLinks.style.right = '0';
-        navLinks.style.background = 'rgba(249, 248, 243, 0.98)';
+        navLinks.style.background = 'rgba(213, 204, 195, 0.98)';
         navLinks.style.padding = '2rem';
         navLinks.style.borderBottom = '1px solid var(--border-divider)';
       }

@@ -3,7 +3,7 @@
 > **Enterprise-grade digital firepower built specifically for independent local businesses.**  
 > *"We Make Local Businesses Feel Big."*
 
-[![Website](https://img.shields.io/badge/Website-hellohellomarketing.net-FF5A1F?style=flat-square)](https://hellohellomarketing.net)
+[![Website](https://img.shields.io/badge/Website-hellohellomarketing.net-b65127?style=flat-square)](https://hellohellomarketing.net)
 [![License: MIT](https://img.shields.io/badge/License-MIT-1040E6?style=flat-square)](LICENSE)
 
 ---
@@ -18,7 +18,7 @@
 
 - **2027 Editorial Agency Design System:**
   - Distinctive typography blending **Fraunces** (Editorial Old-Style Serif display) with **Plus Jakarta Sans** and **Inter** (Neo-Grotesque UI legibility).
-  - High-contrast, accessibility-audited color palette: Deep Slate Navy (`#1A2536`), Soft Cream (`#F9F8F3`), Energy Orange (`#FF5A1F`), Luminous Blue (`#1040E6`), and Meadowland Sage (`#7C8D78`).
+  - High-contrast, accessibility-audited color palette: Near Black (`#070302`), Sand (`#d5ccc3`), Rust Accent (`#b65127`), Luminous Blue (`#1040E6`), and Meadowland Sage (`#7C8D78`).
 - **55/45 Desktop Hero Engine:**
   - Modern browser mockup window with live telemetry indicator.
   - High-contrast `+78% Inbound Calls` KPI metric card.
