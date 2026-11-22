@@ -655,30 +655,30 @@
     </section>
 
     <!-- ==========================================================================
-         Lead Magnet: "The Feel-Big Local Growth Plan"
+         Audit Form Section
          ========================================================================== -->
     <section class="lead-magnet-section" id="growth-plan">
       <div class="container">
         <div class="split-conversion-container" id="magnet-interactive-card">
           <div class="split-conversion-left">
             <div class="section-tag">
-              <span class="badge badge-accent">Bespoke Local Strategy</span>
+              <span class="badge badge-accent">Free local audit</span>
             </div>
-            <h2>Claim Your Free <span class="text-accent">"Feel Big" Growth Plan</span></h2>
-            <p>Tell us a bit about your business, and we'll engineer a tailored blueprint revealing exactly where your competitors are vulnerable and how you can capture market dominance.</p>
+            <h2>Get a free local audit</h2>
+            <p>Tell us about your business and we'll send a short written review of your website, Google profile, and listings. No pressure, no obligation.</p>
 
             <ul class="magnet-deliverables">
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Local Search Gap Analysis:</strong> See high-intent keywords your rivals are ranking for.</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Google profile check:</strong> Categories, hours, photos, and review count compared with nearby competitors.</span>
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Reputation &amp; Trust Audit:</strong> Discover missing directory listings and review gaps.</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Listings check:</strong> Whether your name, address, and phone match across major directories.</span>
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Custom Paid Media Forecast:</strong> Estimated click costs and lead volume in your zip code.</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Website check:</strong> What helps and what gets in the way of calls, especially on phones.</span>
               </li>
             </ul>
           </div>
@@ -686,47 +686,77 @@
           <div class="split-conversion-right">
             <form class="magnet-form" id="lead-magnet-form">
               <div class="form-group">
-                <label for="business-name">Business Name</label>
-                <input type="text" id="business-name" class="form-input" placeholder="e.g. Apex Mechanical Pros" required>
+                <label for="contact-name">Your name</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jane Doe" required>
               </div>
 
               <div class="form-group">
-                <label for="website-url">Current Website (or 'None')</label>
-                <input type="text" id="website-url" class="form-input" placeholder="e.g. apexpros.com">
+                <label for="business-name">Business name</label>
+                <input type="text" id="business-name" name="businessName" class="form-input" placeholder="e.g. Apex Plumbing" required>
               </div>
 
               <div class="form-group">
-                <label for="business-category">Your Industry / Category</label>
-                <select id="business-category" class="form-select" required>
-                  <option value="" disabled selected>Select your industry</option>
-                  <option value="Home Services">Home Trades (HVAC, Plumbing, Electrical, Roofing)</option>
-                  <option value="Healthcare & Wellness">Healthcare & Medical (Dental, MedSpa, Clinic)</option>
-                  <option value="Professional Services">Legal, Financial & Accounting</option>
-                  <option value="Real Estate">Real Estate & Property Management</option>
-                  <option value="Specialty Service">Specialty & Local Retail</option>
-                  <option value="Other">Other Local Service Business</option>
+                <label for="website-url">Website (or &quot;none&quot;)</label>
+                <input type="text" id="website-url" name="website" class="form-input" placeholder="e.g. apexplumbing.com or none">
+              </div>
+
+              <div class="form-group">
+                <label for="business-category">Type of business</label>
+                <select id="business-category" name="category" class="form-select" required>
+                  <option value="" disabled selected>Select your business type</option>
+                  <option value="Home services (plumbing, HVAC, roofing, landscaping)">Home services (plumbing, HVAC, roofing, landscaping)</option>
+                  <option value="Restaurants, cafes, and bars">Restaurants, cafes, and bars</option>
+                  <option value="Health and wellness (dental, medical, salon, spa, fitness)">Health and wellness (dental, medical, salon, spa, fitness)</option>
+                  <option value="Legal, financial, and accounting">Legal, financial, and accounting</option>
+                  <option value="Real estate and property">Real estate and property</option>
+                  <option value="Retail and specialty shops">Retail and specialty shops</option>
+                  <option value="Automotive">Automotive</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="primary-goal">Biggest Growth Challenge</label>
-                <select id="primary-goal" class="form-select" required>
-                  <option value="" disabled selected>What do you need most?</option>
-                  <option value="Need more inbound phone calls & form leads">Need more inbound phone calls & qualified leads</option>
-                  <option value="Need to beat local competitors in Google search">Outranked by competitors on Google Maps & Search</option>
-                  <option value="Need to generate consistent 5-star reviews">Lack of recent 5-star reviews / need reputation boost</option>
-                  <option value="Current marketing is too fragmented">Marketing feels disorganized and hard to track</option>
+                <label for="primary-goal">What would help most?</label>
+                <select id="primary-goal" name="primaryGoal" class="form-select" required>
+                  <option value="" disabled selected>Select what would help most</option>
+                  <option value="More phone calls and requests">More phone calls and requests</option>
+                  <option value="Show up better on Google Maps and search">Show up better on Google Maps and search</option>
+                  <option value="More and better reviews">More and better reviews</option>
+                  <option value="Fix my website or listings">Fix my website or listings</option>
+                  <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="contact-email">Where Should We Send Your Plan?</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="you@yourcompany.com" required>
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@yourcompany.com" required>
               </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Phone</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="(555) 000-0000">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Anything else we should know?</label>
+                <textarea id="contact-message" name="message" class="form-input" rows="3" placeholder="Tell us anything else about your business, locations, or goals"></textarea>
+              </div>
+
+              <!-- Honeypot field (hidden from view) -->
+              <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+                <label for="company-website">Company Website</label>
+                <input type="text" id="company-website" name="company-website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div id="form-error-msg" style="display: none; color: #DC2626; font-size: 0.875rem; padding: 0.75rem 1rem; background: #FEE2E2; border-radius: var(--radius-sm); border: 1px solid #FCA5A5;"></div>
 
               <button type="submit" class="btn btn-primary btn-lg" id="submit-plan-btn" style="width: 100%; margin-top: 0.5rem;">
-                <span>Generate My Custom Growth Plan</span>
+                <span>Send my free audit</span>
               </button>
+
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.85rem; line-height: 1.45;">
+                We only use your details to reply about your audit. See our <a href="privacy.html" style="text-decoration: underline;">Privacy Policy</a>.
+              </p>
             </form>
           </div>
         </div>
@@ -892,7 +922,7 @@
   </footer>
 
   <!-- ==========================================================================
-       Success & Strategy Preview Modal
+       Success Confirmation Modal
        ========================================================================== -->
   <div class="modal-overlay" id="plan-modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-card">
@@ -904,23 +934,13 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
       </div>
 
-      <h3 style="font-size: 1.65rem; margin-bottom: 0.75rem; color: var(--text-navy);" id="modal-title">Your "Feel Big" Plan is Being Prepared!</h3>
+      <h3 style="font-size: 1.65rem; margin-bottom: 0.75rem; color: var(--text-navy);" id="modal-title">Thanks, we got it.</h3>
       <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;" id="modal-message">
-        We have initiated your competitive market scan. A digital marketing strategist from HelloHello Marketing is reviewing your local service area.
+        We'll reply to the email you entered within [ONE BUSINESS DAY] with a short audit. If you do not see it, check your spam folder or email [CONTACT EMAIL].
       </p>
 
-      <div style="background: var(--surface-cream-alt); border: 1px solid var(--border-divider); border-radius: var(--radius-sm); padding: 1.25rem; text-align: left; margin-bottom: 1.5rem;">
-        <div style="font-size: 0.8rem; color: var(--btn-orange); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.04em;">Included in your custom report:</div>
-        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-navy);">
-          <div>• Top 5 Local Competitor Search Keyword Analysis</div>
-          <div>• 70+ Directory Listings & Missing Profiles Audit</div>
-          <div>• Estimated Paid Search CPC & Click-to-Call Estimates</div>
-          <div>• Custom 72-Hour Review Gating Configuration</div>
-        </div>
-      </div>
-
       <button class="btn btn-primary" id="modal-action-btn" style="width: 100%;">
-        <span>Close & Return to Site</span>
+        <span>Close</span>
       </button>
     </div>
   </div>

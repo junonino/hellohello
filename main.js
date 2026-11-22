@@ -63,42 +63,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Lead Magnet Form & Interactive Custom Strategy Modal
+  // 3. Free Local Audit Form & Modal Handling
   const leadForm = document.getElementById('lead-magnet-form');
   const planModal = document.getElementById('plan-modal');
   const modalCloseBtn = document.getElementById('modal-close-button');
   const modalActionBtn = document.getElementById('modal-action-btn');
   const modalTitle = document.getElementById('modal-title');
   const modalMessage = document.getElementById('modal-message');
+  const submitBtn = document.getElementById('submit-plan-btn');
+  const formErrorMsg = document.getElementById('form-error-msg');
 
-  if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const businessName = document.getElementById('business-name').value.trim() || 'Your Business';
-      const category = document.getElementById('business-category').value;
-      const primaryGoal = document.getElementById('primary-goal').value;
-      const email = document.getElementById('contact-email').value.trim();
-
-      // Customize modal content
-      if (modalTitle) {
-        modalTitle.textContent = `The "${businessName}" Growth Plan is Underway!`;
-      }
-      if (modalMessage) {
-        modalMessage.innerHTML = `We are analyzing local search data for the <strong>${category}</strong> industry. Your tailored strategy report addressing <em>"${primaryGoal}"</em> will be sent directly to <strong>${email}</strong>.`;
-      }
-
-      // Show modal
-      openModal();
-      leadForm.reset();
-    });
-  }
+  // Form endpoint URL placeholder. Replace this with your Formspree (or similar) endpoint URL.
+  const FORM_ENDPOINT = '[FORM_ENDPOINT_URL]';
 
   function openModal() {
     if (planModal) {
       planModal.classList.add('active');
       planModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      if (modalActionBtn) modalActionBtn.focus();
     }
   }
 
@@ -107,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       planModal.classList.remove('active');
       planModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      if (submitBtn) submitBtn.focus();
     }
   }
 
@@ -125,25 +109,96 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Accent Theme Switcher (Warm Amber / Sage Green)
-  const btnAmber = document.getElementById('btn-theme-amber');
-  const btnSage = document.getElementById('btn-theme-sage');
+  if (leadForm) {
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  if (btnAmber && btnSage) {
-    btnAmber.addEventListener('click', () => {
-      document.body.classList.remove('theme-sage');
-      btnAmber.classList.add('active');
-      btnSage.classList.remove('active');
-    });
+      if (formErrorMsg) {
+        formErrorMsg.style.display = 'none';
+        formErrorMsg.textContent = '';
+      }
 
-    btnSage.addEventListener('click', () => {
-      document.body.classList.add('theme-sage');
-      btnSage.classList.add('active');
-      btnAmber.classList.remove('active');
+      // Honeypot check: if filled, bypass network request and show immediate success
+      const honeypot = document.getElementById('company-website');
+      if (honeypot && honeypot.value.trim() !== '') {
+        leadForm.reset();
+        if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
+        if (modalMessage) {
+          modalMessage.textContent = "We'll reply to the email you entered within [ONE BUSINESS DAY] with a short audit. If you do not see it, check your spam folder or email [CONTACT EMAIL].";
+        }
+        openModal();
+        return;
+      }
+
+      const name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
+      const businessName = document.getElementById('business-name') ? document.getElementById('business-name').value.trim() : '';
+      const website = document.getElementById('website-url') ? document.getElementById('website-url').value.trim() : '';
+      const category = document.getElementById('business-category') ? document.getElementById('business-category').value : '';
+      const primaryGoal = document.getElementById('primary-goal') ? document.getElementById('primary-goal').value : '';
+      const email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
+      const phone = document.getElementById('contact-phone') ? document.getElementById('contact-phone').value.trim() : '';
+      const message = document.getElementById('contact-message') ? document.getElementById('contact-message').value.trim() : '';
+
+      // Button loading state
+      const originalBtnText = submitBtn ? submitBtn.querySelector('span')?.textContent || 'Send my free audit' : 'Send my free audit';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        const span = submitBtn.querySelector('span');
+        if (span) span.textContent = 'Sending...';
+      }
+
+      const payload = {
+        name,
+        businessName,
+        website,
+        category,
+        primaryGoal,
+        email,
+        phone,
+        message
+      };
+
+      try {
+        // If placeholder hasn't been configured, throw error to trigger graceful fallback
+        if (!FORM_ENDPOINT || FORM_ENDPOINT.includes('[FORM_ENDPOINT_URL]')) {
+          throw new Error('Endpoint not yet configured');
+        }
+
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+
+        leadForm.reset();
+        if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
+        if (modalMessage) {
+          modalMessage.textContent = "We'll reply to the email you entered within [ONE BUSINESS DAY] with a short audit. If you do not see it, check your spam folder or email [CONTACT EMAIL].";
+        }
+        openModal();
+      } catch (err) {
+        if (formErrorMsg) {
+          formErrorMsg.style.display = 'block';
+          formErrorMsg.textContent = 'Something went wrong. Please try again, or email us at [CONTACT EMAIL].';
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          const span = submitBtn.querySelector('span');
+          if (span) span.textContent = originalBtnText;
+        }
+      }
     });
   }
 
-  // 5. Mobile Menu Toggle
+  // 4. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const navLinks = document.getElementById('main-nav-links');
 
