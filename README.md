@@ -1,101 +1,104 @@
 # HelloHello Marketing
 
-> **Enterprise-grade digital firepower built specifically for independent local businesses.**  
-> *"We Make Local Businesses Feel Big."*
-
-[![Website](https://img.shields.io/badge/Website-hellohellomarketing.net-FF5A1F?style=flat-square)](https://hellohellomarketing.net)
-[![License: MIT](https://img.shields.io/badge/License-MIT-1040E6?style=flat-square)](LICENSE)
+> **Local marketing for local businesses.**  
+> Helping independent local businesses show up on Google Maps, look trustworthy online, and make it easy for customers to call.
 
 ---
 
-## Overview
+## About the Site
 
-**HelloHello Marketing** is a high-performance marketing platform and client acquisition engine for independent local businesses. It delivers Fortune 500-level digital infrastructure—high-converting web foundations, multi-network search advertising, automated 5-star reputation management, and local search dominance—without enterprise overhead.
-
----
-
-## Key Features
-
-- **2027 Editorial Agency Design System:**
-  - Distinctive typography blending **Fraunces** (Editorial Old-Style Serif display) with **Plus Jakarta Sans** and **Inter** (Neo-Grotesque UI legibility).
-  - High-contrast, accessibility-audited color palette: Deep Slate Navy (`#1A2536`), Soft Cream (`#F9F8F3`), Energy Orange (`#FF5A1F`), Luminous Blue (`#1040E6`), and Meadowland Sage (`#7C8D78`).
-- **55/45 Desktop Hero Engine:**
-  - Modern browser mockup window with live telemetry indicator.
-  - High-contrast `+78% Inbound Calls` KPI metric card.
-  - Compounding monthly inbound velocity SVG chart.
-  - 15-mile regional review radar map with 5-star customer feedback pins.
-  - Anchored `Active System` badge pointing directly to the proprietary **Automated Reputation Engine**.
-- **Micro-Bento Services Grid:**
-  - Asymmetrical grid highlighting the double-width **Smart Web Presence & 70+ Directory Engine**.
-  - Interactive category tab filters (*Web & Reputation*, *Local Search & Voice*, *Managed Ads*, *CRM & Automation*).
-- **50/50 Split Conversion Container:**
-  - Interactive "Feel Big" strategy plan generator with industry-specific modal feedback.
-- **Client Transparency FAQ Accordion:**
-  - Addressing contracts, ad spend ownership, setup timelines, and lead exclusivity.
+This repository contains the static website for **HelloHello Marketing** (`hellohellomarketing.net`), built with vanilla HTML5, CSS3, and JavaScript, and designed for fast loading, zero dependencies, and hosting via GitHub Pages.
 
 ---
 
-## Technology Stack
-
-- **HTML5:** Semantic, accessible markup with structured JSON-LD Schema.org metadata.
-- **CSS3:** Custom Vanilla CSS design system with CSS custom properties, responsive grid/flexbox layouts, and hardware-accelerated animations. No heavy framework dependencies.
-- **JavaScript:** Lightweight vanilla client-side micro-interactions (tab filtering, smooth FAQ accordions, and interactive strategy session modal).
-
----
-
-## Project Structure
+## File Structure
 
 ```text
 HelloHelloMarketing/
 ├── assets/
-│   ├── hhm-logo.png        # Transparent brand logo in Fraunces editorial serif
-│   ├── hhmm-logo.png       # Original sans-serif archive logo
-│   └── hero-visual.jpg     # High-resolution architectural visual
-├── index.html              # Core landing page
-├── styles.css              # Master 2027 editorial stylesheet
-├── main.js                 # Interactive UI logic & modal handlers
-├── .gitignore              # Git ignore rules for clean repository
-└── README.md               # Project documentation
+│   ├── hhm-logo.png          # Main website logo (Fraunces serif)
+│   └── og-image.png          # Social preview image (1200x630, <200 KB)
+├── source/                   # Original design files (kept separate from live site bundle)
+│   ├── hhm-logo.af           # Affinity Designer source asset
+│   ├── hellohello-m.png      # Raw full-resolution graphic
+│   └── hhmm-logo.png         # Legacy sans-serif logo graphic
+├── index.html                # Main landing page
+├── privacy.html              # Privacy Policy page
+├── terms.html                # Terms of Service page
+├── styles.css                # Site stylesheet (palette, typography, layout)
+├── main.js                   # Client-side interactions (tabs, FAQ accordion, form submit)
+├── CNAME                     # Custom domain pointer (hellohellomarketing.net)
+├── .gitignore                # Git ignore configuration
+└── README.md                 # Project documentation and setup guide
 ```
+
+---
+
+## How to Edit Site Copy and Placeholders
+
+The site copy is structured in plain HTML with clear section IDs (`#hero`, `#services`, `#roadmap`, `#comparison`, `#growth-plan`, `#faq`).
+
+### Open Placeholders to Fill
+
+Before launching publicly, search for the following bracketed placeholders and replace them with your actual business information:
+
+| Placeholder | Location | Description |
+| :--- | :--- | :--- |
+| `[YOUR AREA]` | `index.html` (Hero subtext) | The city or geographic region you serve |
+| `[CITY AND SERVICE AREA]` | `index.html`, `privacy.html`, `terms.html` (Footer blurb) | Short service territory description |
+| `[CITY, STATE]` | `index.html`, `privacy.html`, `terms.html` (Footer) | Public business location or office city |
+| `[EMAIL]` / `[CONTACT EMAIL]` | Footers, form feedback, `privacy.html`, `terms.html` | Business email address |
+| `[PHONE]` | Footers | Business telephone number |
+| `[FORM_ENDPOINT_URL]` | `main.js` | Endpoint URL from Formspree (or similar form service) |
+| `[ONE BUSINESS DAY]` | `main.js`, `index.html` (Modal message) | Promised audit turnaround time |
+| `[30]` days | `index.html` (Promises section) | Notice period to cancel month-to-month service |
+| `[NUMBER]` posts | `index.html` (Social media card) | Number of monthly social posts included |
+| `[DATE]` | `privacy.html`, `terms.html` | Date of last policy review |
+| `[STATE]` | `terms.html` | Governing state for legal terms |
+
+---
+
+## Setting Up the Audit Form
+
+The free audit form in `#growth-plan` submits form data as JSON via `fetch` to a form service endpoint:
+
+1. Create a form at [Formspree](https://formspree.io/) (or a similar form processing service).
+2. Copy your form endpoint URL (e.g. `https://formspree.io/f/xyz...`).
+3. Open `main.js` and update line 15:
+   ```javascript
+   const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+   ```
+4. Test a submission. When submitted successfully, the form resets and displays the confirmation modal. If network issues occur or the endpoint is unreachable, an inline alert guides the visitor to email you directly.
+5. The form includes an invisible honeypot field (`company-website`) that silently catches automated spam bots without requiring CAPTCHAs.
 
 ---
 
 ## Local Development
 
-You can run this project locally using any static HTTP server.
+You can run this project locally using Python's built-in HTTP server:
 
-### Option 1: Python (Built-in)
 ```bash
-# Python 3
+# Start local server on port 3000
 python3 -m http.server 3000
 ```
-Then visit `http://localhost:3000` in your browser.
-
-### Option 2: Node.js (npx serve)
-```bash
-npx serve .
-```
+Open your browser and navigate to `http://localhost:3000`.
 
 ---
 
-## Publishing to GitHub
+## Publishing to GitHub Pages
 
-1. **Create a new repository** on [GitHub](https://github.com/new) (e.g., `HelloHelloMarketing`).
-2. **Add remote and push:**
+1. Push your changes to the `main` branch:
    ```bash
-   git remote add origin https://github.com/<your-username>/HelloHelloMarketing.git
-   git branch -M main
-   git push -u origin main
+   git push origin main
    ```
-
-### Enabling GitHub Pages (Free Hosting)
-1. Go to your repository on GitHub.
-2. Click **Settings** > **Pages** (under Code and automation).
-3. Under **Branch**, select `main` and root `/`, then click **Save**.
-4. Your site will be live at `https://<your-username>.github.io/HelloHelloMarketing/` within 1–2 minutes!
+2. In your GitHub repository:
+   - Go to **Settings** > **Pages**.
+   - Under **Build and deployment**, ensure **Source** is set to **Deploy from a branch**.
+   - Select branch `main` and folder `/ (root)`, then click **Save**.
+3. With the included `CNAME` file, configure your DNS provider with the proper `ALIAS` / `ANAME` or `A` records pointing to GitHub Pages.
 
 ---
 
-## License
+## Legal Review Notice
 
-This project is licensed under the [MIT License](LICENSE).
+> **Important:** The provided `privacy.html` and `terms.html` pages are plain-language drafts written to outline standard agency practices and data collection. A qualified legal professional should review both documents before the site begins collecting client data or conducting commercial transactions.
