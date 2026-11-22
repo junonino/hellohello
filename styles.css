@@ -633,8 +633,8 @@ button.btn-secondary:hover {
    Comparison: The "Feel Big" Difference (Tightened Spatial Layout)
    ========================================================================== */
 .comparison-section {
-  padding: 4.75rem 0;
-  background: var(--surface-cream-alt);
+  padding: 5rem 0;
+  background: var(--bg-cream);
   border-bottom: 1px solid var(--border-divider);
 }
 
