@@ -1296,13 +1296,23 @@ button.btn-secondary:hover {
 }
 
 @media (max-width: 480px) {
-  .dashboard-kpi-row {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .hero-title {
+    font-size: 2.35rem;
+  }
+  .section-header h2 {
+    font-size: 1.95rem;
+  }
+  .split-conversion-container {
+    padding: 1.5rem;
+  }
+  .split-conversion-right {
+    padding: 1.5rem;
+  }
+  .footer-grid {
     grid-template-columns: 1fr;
-  }
-  .browser-address-bar {
-    max-width: 140px;
-  }
-  .kpi-main-stat {
-    font-size: 1.75rem;
+    gap: 2rem;
   }
 }
