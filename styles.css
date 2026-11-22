@@ -810,43 +810,6 @@ button.btn-secondary:hover {
   align-items: start;
 }
 
-.bento-pill-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.bento-pill {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-  background: var(--surface-cream-alt);
-  color: var(--text-navy);
-  border: 1px solid var(--border-divider);
-}
-
-.service-icon-wrap {
-  width: 46px;
-  height: 46px;
-  border-radius: var(--radius-sm);
-  background: var(--sage-soft);
-  border: 1px solid var(--sage-border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--sage-border);
-  margin-bottom: 1.25rem;
-}
-
-.bento-card:hover .service-icon-wrap {
-  background: var(--btn-orange-soft);
-  color: var(--btn-orange);
-  border-color: rgba(255, 90, 31, 0.3);
-}
-
 .bento-card h3 {
   font-size: 1.45rem;
   margin-bottom: 0.75rem;
