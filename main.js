@@ -133,29 +133,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
       const businessName = document.getElementById('business-name') ? document.getElementById('business-name').value.trim() : '';
       const website = document.getElementById('website-url') ? document.getElementById('website-url').value.trim() : '';
-      const category = document.getElementById('business-category') ? document.getElementById('business-category').value : '';
-      const primaryGoal = document.getElementById('primary-goal') ? document.getElementById('primary-goal').value : '';
       const email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
       const phone = document.getElementById('contact-phone') ? document.getElementById('contact-phone').value.trim() : '';
-      const message = document.getElementById('contact-message') ? document.getElementById('contact-message').value.trim() : '';
+      const marketingSetup = document.getElementById('marketing-setup') ? document.getElementById('marketing-setup').value : '';
 
       // Button loading state
-      const originalBtnText = submitBtn ? submitBtn.querySelector('span')?.textContent || 'Send my free audit' : 'Send my free audit';
+      const originalBtnText = submitBtn ? submitBtn.querySelector('span')?.textContent || 'Get My Free Local Audit' : 'Get My Free Local Audit';
       if (submitBtn) {
         submitBtn.disabled = true;
         const span = submitBtn.querySelector('span');
-        if (span) span.textContent = 'Sending...';
+        if (span) span.textContent = 'Submitting...';
       }
 
       const payload = {
         name,
         businessName,
         website,
-        category,
-        primaryGoal,
         email,
         phone,
-        message
+        marketingSetup
       };
 
       try {

@@ -440,6 +440,13 @@ button.btn-secondary:hover {
   background: var(--sage-border);
 }
 
+.proof-check {
+  color: var(--sage-border);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 /* ==========================================================================
    Hero Right Asset: Modern Browser Mockup & Growth Engine Dashboard
    55/45 Desktop Split Anchor
@@ -840,6 +847,16 @@ button.btn-secondary:hover {
   color: var(--text-navy);
 }
 
+.service-pillar-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
 .service-deliverable-item svg {
   color: var(--sage-border);
   flex-shrink: 0;
@@ -858,6 +875,13 @@ button.btn-secondary:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+
+.roadmap-timeline-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 2.75rem;
 }
 
@@ -1278,7 +1302,8 @@ button.btn-secondary:hover {
   .comparison-grid {
     grid-template-columns: 1fr;
   }
-  .roadmap-timeline {
+  .roadmap-timeline,
+  .roadmap-timeline-2col {
     grid-template-columns: 1fr;
   }
   .nav-links {
