@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
       const businessName = document.getElementById('business-name') ? document.getElementById('business-name').value.trim() : '';
       const website = document.getElementById('website-url') ? document.getElementById('website-url').value.trim() : '';
+      const serviceLocation = document.getElementById('service-location') ? document.getElementById('service-location').value.trim() : '';
       const serviceInterest = document.getElementById('service-interest') ? document.getElementById('service-interest').value : '';
       const email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
       const phone = document.getElementById('contact-phone') ? document.getElementById('contact-phone').value.trim() : '';
@@ -146,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name,
         businessName,
         website,
+        serviceLocation,
         serviceInterest,
         email,
         phone,

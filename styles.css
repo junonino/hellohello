@@ -727,11 +727,11 @@ button.btn-secondary:hover {
 }
 
 .audit-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--text-navy);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .audit-badge-example {
@@ -915,6 +915,13 @@ button.btn-secondary:hover {
   padding: 2.5rem;
   border-radius: var(--radius-md);
   transition: transform var(--transition-fast);
+}
+
+.comparison-card h3 {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .card-negative {
@@ -1239,7 +1246,10 @@ button.btn-secondary:hover {
 }
 
 .roadmap-step h3 {
+  font-family: var(--font-sans);
   font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin-bottom: 0.85rem;
 }
 
