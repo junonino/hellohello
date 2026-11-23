@@ -4,34 +4,30 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Service Category Tab Filtering
-  const tabButtons = document.querySelectorAll('.service-tab-btn');
-  const serviceCards = document.querySelectorAll('.service-card');
+  // 1. Service Pillar CTA Smooth Scroll & Auto-Selection
+  const pillarCtaButtons = document.querySelectorAll('.service-cta-btn');
+  const serviceInterestSelect = document.getElementById('service-interest');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove active from all buttons
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      const targetCategory = button.getAttribute('data-target');
-
-      serviceCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (targetCategory === 'all' || cardCategory === targetCategory) {
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 10);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 200);
+  pillarCtaButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const interest = btn.getAttribute('data-interest');
+      if (serviceInterestSelect) {
+        if (interest === 'pillar-1') {
+          serviceInterestSelect.value = 'Pillar 1: Local Search & Google Map Pack Visibility';
+        } else if (interest === 'pillar-2') {
+          serviceInterestSelect.value = 'Pillar 2: High-Converting Websites & Real Customer Messaging';
+        } else if (interest === 'pillar-3') {
+          serviceInterestSelect.value = 'Pillar 3: Call Tracking & High-Intent Local Campaigns';
         }
-      });
+
+        // Highlight field visually to confirm auto-selection
+        serviceInterestSelect.style.borderColor = 'var(--btn-orange)';
+        serviceInterestSelect.style.boxShadow = '0 0 0 3px rgba(255, 90, 31, 0.25)';
+        setTimeout(() => {
+          serviceInterestSelect.style.borderColor = '';
+          serviceInterestSelect.style.boxShadow = '';
+        }, 2200);
+      }
     });
   });
 
@@ -133,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
       const businessName = document.getElementById('business-name') ? document.getElementById('business-name').value.trim() : '';
       const website = document.getElementById('website-url') ? document.getElementById('website-url').value.trim() : '';
+      const serviceInterest = document.getElementById('service-interest') ? document.getElementById('service-interest').value : '';
       const email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
       const phone = document.getElementById('contact-phone') ? document.getElementById('contact-phone').value.trim() : '';
       const marketingSetup = document.getElementById('marketing-setup') ? document.getElementById('marketing-setup').value : '';
@@ -149,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name,
         businessName,
         website,
+        serviceInterest,
         email,
         phone,
         marketingSetup
