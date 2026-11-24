@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('submit-plan-btn');
   const formErrorMsg = document.getElementById('form-error-msg');
 
-  // Form endpoint URL placeholder. Replace this with your Formspree (or similar) endpoint URL.
-  const FORM_ENDPOINT = '[FORM_ENDPOINT_URL]';
+  // Form endpoint URL (Formspree)
+  const FORM_ENDPOINT = 'https://formspree.io/f/xvkavydv';
 
   function openModal() {
     if (planModal) {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         leadForm.reset();
         if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
         if (modalMessage) {
-          modalMessage.textContent = "We'll reply to the email you entered within [ONE BUSINESS DAY] with a short audit. If you do not see it, check your spam folder or email [CONTACT EMAIL].";
+          modalMessage.textContent = "We'll review your local presence and email your custom diagnostic report within 24 hours. If you don't see it, please check your spam folder.";
         }
         openModal();
         return;
@@ -176,13 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
         leadForm.reset();
         if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
         if (modalMessage) {
-          modalMessage.textContent = "We'll reply to the email you entered within [ONE BUSINESS DAY] with a short audit. If you do not see it, check your spam folder or email [CONTACT EMAIL].";
+          modalMessage.textContent = "We'll review your local presence and email your custom diagnostic report within 24 hours. If you don't see it, please check your spam folder.";
         }
         openModal();
       } catch (err) {
         if (formErrorMsg) {
           formErrorMsg.style.display = 'block';
-          formErrorMsg.textContent = 'Something went wrong. Please try again, or email us at [CONTACT EMAIL].';
+          formErrorMsg.textContent = 'Something went wrong submitting your audit request. Please try again.';
         }
       } finally {
         if (submitBtn) {
