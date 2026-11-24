@@ -19,29 +19,64 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
   <header class="header" id="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="HelloHello Marketing Home">
-        <img src="assets/hhm-logo.png" alt="HelloHello Marketing" class="brand-logo-img" width="146" height="35">
+      <a href="index.html" class="brand-logo" id="nav-brand-logo" aria-label="HelloHello Marketing Home">
+        <img src="assets/hhm-logo.png" alt="hellohello marketing" class="brand-logo-img" width="146" height="35">
       </a>
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links" id="main-nav-links">
-          <li><a href="index.html#services" class="nav-link">Services</a></li>
-          <li><a href="index.html#roadmap" class="nav-link">How It Works</a></li>
-          <li><a href="index.html#comparison" class="nav-link">Our Promises</a></li>
-          <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+          <li><a href="index.html#roadmap" class="nav-link" id="nav-link-how-it-works">How It Works</a></li>
+          <li><a href="index.html#services" class="nav-link" id="nav-link-services">Services</a></li>
+          <li><a href="index.html#comparison" class="nav-link" id="nav-link-ownership">Ownership Guarantee</a></li>
+          <li><a href="index.html#faq" class="nav-link" id="nav-link-faq">FAQ</a></li>
         </ul>
       </nav>
 
       <div class="nav-cta-group">
-        <a href="index.html#growth-plan" class="btn btn-primary btn-sm">
-          <span>Free Audit</span>
+        <a href="index.html#growth-plan" class="btn btn-primary btn-sm" id="nav-btn-cta">
+          <span>Get Your Free Local Audit</span>
         </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Editorial Studio Ticker -->
+  <div class="studio-banner">
+    <div class="studio-marquee">
+      <span class="highlight">Serving San Diego &amp; SoCal Local Businesses</span>
+      <span>•</span>
+      <span>100% Asset Ownership</span>
+      <span>•</span>
+      <span class="highlight">Tracked Phone Calls</span>
+      <span>•</span>
+      <span>Map Pack Visibility</span>
+      <span>•</span>
+      <span class="highlight">Zero Long-Term Contracts</span>
+      <span>•</span>
+      <span>Fast Sprint Execution</span>
+      <span>•</span>
+      <span class="highlight">Serving San Diego &amp; SoCal Local Businesses</span>
+      <span>•</span>
+      <span>100% Asset Ownership</span>
+      <span>•</span>
+      <span class="highlight">Tracked Phone Calls</span>
+      <span>•</span>
+      <span>Map Pack Visibility</span>
+      <span>•</span>
+      <span class="highlight">Zero Long-Term Contracts</span>
+      <span>•</span>
+      <span>Fast Sprint Execution</span>
+    </div>
+  </div>
 
   <main style="padding: 4.5rem 0 6rem 0;">
     <div class="container" style="max-width: 760px;">
@@ -173,5 +208,7 @@
     </div>
   </footer>
 
+  <!-- JavaScript Interaction Script -->
+  <script src="main.js"></script>
 </body>
 </html>
