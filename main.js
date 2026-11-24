@@ -4,6 +4,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Page load timestamp for time-on-page spam protection (speed trap)
+  const pageLoadTime = Date.now();
   // 1. Service Pillar CTA Smooth Scroll & Auto-Selection
   const pillarCtaButtons = document.querySelectorAll('.service-cta-btn');
   const serviceInterestSelect = document.getElementById('service-interest');
@@ -114,9 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
         formErrorMsg.textContent = '';
       }
 
-      // Honeypot check: if filled, bypass network request and show immediate success
+      // 1. Honeypot check: if filled by a bot, silently fake success without sending to Formspree
       const honeypot = document.getElementById('company-website');
       if (honeypot && honeypot.value.trim() !== '') {
+        leadForm.reset();
+        if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
+        if (modalMessage) {
+          modalMessage.textContent = "We'll review your local presence and email your custom diagnostic report within 24 hours. If you don't see it, please check your spam folder.";
+        }
+        openModal();
+        return;
+      }
+
+      // 2. Time-on-page speed trap: bots submit forms in under 3 seconds
+      const secondsOnPage = (Date.now() - pageLoadTime) / 1000;
+      if (secondsOnPage < 3.0) {
         leadForm.reset();
         if (modalTitle) modalTitle.textContent = 'Thanks, we got it.';
         if (modalMessage) {
