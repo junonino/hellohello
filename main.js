@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const marketingSetup = document.getElementById('marketing-setup') ? document.getElementById('marketing-setup').value : '';
 
       // Button loading state
-      const originalBtnText = submitBtn ? submitBtn.querySelector('span')?.textContent || 'Get My Free Local Audit' : 'Get My Free Local Audit';
+      const originalBtnText = submitBtn ? submitBtn.querySelector('span')?.textContent || 'Claim My Free San Diego Audit' : 'Claim My Free San Diego Audit';
       if (submitBtn) {
         submitBtn.disabled = true;
         const span = submitBtn.querySelector('span');

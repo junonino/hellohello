@@ -17,9 +17,9 @@
    ========================================================================== */
 
 :root {
-  /* 2027 Color Palette */
+  /* 2027 Color Palette - Pacific Coastal Navy & Sunset Orange */
   --bg-cream: #F9F8F3;
-  --text-navy: #1A2536;
+  --text-navy: #142838;
   --text-muted: #5C6A7E;
   --text-light: #7E8B9E;
   
@@ -590,14 +590,14 @@ button.btn-secondary:hover {
 }
 
 .phone-lead-alert {
-  background: #1A2536;
+  background: #142838;
   color: #FFFFFF;
   border-radius: var(--radius-md);
   padding: 1.15rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 10px 25px rgba(26, 37, 54, 0.2);
+  box-shadow: 0 10px 25px rgba(20, 40, 56, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -885,7 +885,7 @@ button.btn-secondary:hover {
    ========================================================================== */
 .comparison-section {
   padding: 5.5rem 0;
-  background: #141D2B;
+  background: #0E1D2A;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -1126,6 +1126,9 @@ button.btn-secondary:hover {
 }
 
 .bento-card h3 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   font-size: 1.25rem;
   margin-bottom: 0.55rem;
   line-height: 1.25;
@@ -1250,7 +1253,15 @@ button.btn-secondary:hover {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-step-summary {
+  font-size: 0.885rem;
+  color: var(--text-navy);
+  font-weight: 600;
+  margin-bottom: 1.15rem;
+  line-height: 1.45;
 }
 
 .roadmap-step ul {
@@ -1502,11 +1513,12 @@ button.btn-secondary:hover {
 }
 
 /* ==========================================================================
-   Footer
+   Footer: Coastal Pacific Navy
    ========================================================================== */
 .footer {
   padding: 5rem 0 2.5rem 0;
-  background: var(--bg-cream);
+  background: #142838;
+  color: #FFFFFF;
 }
 
 .footer-grid {
@@ -1517,7 +1529,7 @@ button.btn-secondary:hover {
 }
 
 .footer-brand p {
-  color: var(--text-muted);
+  color: #A3B3C2;
   font-size: 0.95rem;
   margin-top: 1rem;
   max-width: 330px;
@@ -1527,7 +1539,7 @@ button.btn-secondary:hover {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
-  color: var(--text-navy);
+  color: #FFFFFF;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 800;
@@ -1541,12 +1553,12 @@ button.btn-secondary:hover {
 }
 
 .footer-links a:not(.btn) {
-  color: var(--text-muted);
+  color: #A3B3C2;
   font-size: 0.9rem;
 }
 
 .footer-links a:not(.btn):hover {
-  color: var(--blue-anchor);
+  color: var(--btn-orange);
 }
 
 .footer-bottom {
@@ -1554,11 +1566,19 @@ button.btn-secondary:hover {
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-divider);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: #7A8E9F;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.footer-bottom a {
+  color: #A3B3C2;
+}
+
+.footer-bottom a:hover {
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
