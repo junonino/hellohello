@@ -546,54 +546,62 @@
 
           <div class="split-conversion-right">
             <form class="magnet-form" id="lead-magnet-form">
-              <div class="form-group">
-                <label for="contact-name">Your Name</label>
-                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jane Doe" required>
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="business-name">Business Name</label>
+                  <input type="text" id="business-name" name="businessName" class="form-input" placeholder="e.g. Apex Plumbing" required>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="business-name">Business Name</label>
-                <input type="text" id="business-name" name="businessName" class="form-input" placeholder="e.g. Apex Plumbing" required>
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@yourcompany.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-phone">Phone Number</label>
+                  <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="(619) 000-0000">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="website-url">Website URL (or Google Business Profile link)</label>
-                <input type="text" id="website-url" name="website" class="form-input" placeholder="e.g. apexplumbing.com or Google Maps URL">
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="website-url">Website URL (or GBP link)</label>
+                  <input type="text" id="website-url" name="website" class="form-input" placeholder="e.g. apexplumbing.com">
+                </div>
+
+                <div class="form-group">
+                  <label for="service-location">City / Neighborhood</label>
+                  <input type="text" id="service-location" name="serviceLocation" class="form-input" placeholder="e.g. San Diego, Chula Vista">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="service-location">Primary City / Neighborhood</label>
-                <input type="text" id="service-location" name="serviceLocation" class="form-input" placeholder="e.g. San Diego, Chula Vista, Oceanside, Carlsbad">
-              </div>
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="service-interest">System of Interest</label>
+                  <select id="service-interest" name="serviceInterest" class="form-select">
+                    <option value="Full 360° Diagnostic (All 3 Systems)">Full 360° Diagnostic (All 3)</option>
+                    <option value="Pillar 1: Local Search & Google Map Pack Visibility">Pillar 1: Local Search &amp; Maps</option>
+                    <option value="Pillar 2: High-Converting Websites & Real Customer Messaging">Pillar 2: Websites &amp; Messaging</option>
+                    <option value="Pillar 3: Call Tracking & High-Intent Local Campaigns">Pillar 3: Call Tracking &amp; Ads</option>
+                  </select>
+                </div>
 
-              <div class="form-group">
-                <label for="service-interest">Primary System of Interest</label>
-                <select id="service-interest" name="serviceInterest" class="form-select">
-                  <option value="Full 360° Diagnostic (All 3 Systems)">Full 360° Diagnostic (All 3 Systems)</option>
-                  <option value="Pillar 1: Local Search & Google Map Pack Visibility">Pillar 1: Local Search &amp; Google Map Pack Visibility</option>
-                  <option value="Pillar 2: High-Converting Websites & Real Customer Messaging">Pillar 2: High-Converting Websites &amp; Real Customer Messaging</option>
-                  <option value="Pillar 3: Call Tracking & High-Intent Local Campaigns">Pillar 3: Call Tracking &amp; High-Intent Local Campaigns</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-email">Email Address</label>
-                <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@yourcompany.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-phone">Phone Number</label>
-                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="(555) 000-0000">
-              </div>
-
-              <div class="form-group">
-                <label for="marketing-setup">Current Marketing Setup</label>
-                <select id="marketing-setup" name="marketingSetup" class="form-select" required>
-                  <option value="" disabled selected>Select your current setup</option>
-                  <option value="Currently with a big enterprise agency">Currently with a big enterprise agency</option>
-                  <option value="Doing it myself">Doing it myself</option>
-                  <option value="Starting fresh">Starting fresh</option>
-                </select>
+                <div class="form-group">
+                  <label for="marketing-setup">Current Setup</label>
+                  <select id="marketing-setup" name="marketingSetup" class="form-select" required>
+                    <option value="" disabled selected>Select current setup</option>
+                    <option value="Currently with a big enterprise agency">With a big agency</option>
+                    <option value="Doing it myself">Doing it myself</option>
+                    <option value="Starting fresh">Starting fresh</option>
+                  </select>
+                </div>
               </div>
 
               <!-- Honeypot field (hidden from view) -->
@@ -602,14 +610,14 @@
                 <input type="text" id="company-website" name="company-website" tabindex="-1" autocomplete="off">
               </div>
 
-              <div id="form-error-msg" style="display: none; color: #DC2626; font-size: 0.875rem; padding: 0.75rem 1rem; background: #FEE2E2; border-radius: var(--radius-sm); border: 1px solid #FCA5A5;"></div>
+              <div id="form-error-msg" style="display: none; color: #DC2626; font-size: 0.85rem; padding: 0.65rem 0.85rem; background: #FEE2E2; border-radius: var(--radius-sm); border: 1px solid #FCA5A5;"></div>
 
-              <button type="submit" class="btn btn-primary btn-lg" id="submit-plan-btn" style="width: 100%; margin-top: 0.5rem;">
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-plan-btn" style="width: 100%; margin-top: 0.25rem; padding: 0.85rem 1.5rem;">
                 <span>Claim My Free San Diego Audit</span>
               </button>
 
-              <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.85rem; line-height: 1.45;">
-                See who’s outranking you in 24 hours. We only use your details to deliver your custom diagnostic. See our <a href="privacy.html" style="text-decoration: underline;">Privacy Policy</a>.
+              <p style="font-size: 0.785rem; color: #CADAE8; text-align: center; margin-top: 0.5rem; line-height: 1.4;">
+                See who’s outranking you in 24 hours. We only use your details to deliver your custom diagnostic. See our <a href="privacy.html" style="color: #FFFFFF; text-decoration: underline;">Privacy Policy</a>.
               </p>
             </form>
           </div>

@@ -23,6 +23,11 @@
   --text-muted: #5C6A7E;
   --text-light: #7E8B9E;
   
+  /* Lighter Pacific Coastal Blue for Focal Sections & Form Card */
+  --coastal-navy: #1E4265;
+  --coastal-navy-dark: #16334F;
+  --coastal-navy-light: #265582;
+  
   --btn-orange: #FF5A1F;
   --btn-orange-hover: #E04810;
   --btn-orange-soft: rgba(255, 90, 31, 0.1);
@@ -590,14 +595,14 @@ button.btn-secondary:hover {
 }
 
 .phone-lead-alert {
-  background: #142838;
+  background: var(--coastal-navy);
   color: #FFFFFF;
   border-radius: var(--radius-md);
   padding: 1.15rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 10px 25px rgba(20, 40, 56, 0.25);
+  box-shadow: 0 10px 25px rgba(30, 66, 101, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -885,9 +890,9 @@ button.btn-secondary:hover {
    ========================================================================== */
 .comparison-section {
   padding: 5.5rem 0;
-  background: #0E1D2A;
+  background: var(--coastal-navy);
   color: #FFFFFF;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .comparison-section .section-tag .badge {
@@ -901,7 +906,7 @@ button.btn-secondary:hover {
 }
 
 .comparison-section p {
-  color: #A0ABC0;
+  color: #CADAE8;
 }
 
 .comparison-grid {
@@ -1289,52 +1294,52 @@ button.btn-secondary:hover {
    Trend 3: Embedded Split Form Conversions (Strict 50/50 Split Container)
    ========================================================================== */
 .lead-magnet-section {
-  padding: 5.5rem 0;
+  padding: 4.75rem 0;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border-divider);
 }
 
 .split-conversion-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 3rem;
   align-items: center;
   background: var(--surface-cream-alt);
   border: 1px solid var(--border-divider);
   border-radius: var(--radius-lg);
-  padding: 3.75rem;
+  padding: 2.75rem 3rem;
 }
 
 .split-conversion-left {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .split-conversion-left h2 {
-  font-size: 2.85rem;
-  line-height: 1.15;
+  font-size: 2.35rem;
+  line-height: 1.18;
 }
 
 .split-conversion-left p {
   color: var(--text-muted);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .magnet-deliverables {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .magnet-deliverables li {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   color: var(--text-navy);
 }
 
@@ -1345,8 +1350,8 @@ button.btn-secondary:hover {
 
 /* Founder / Partner Grounding Trust Sign-off */
 .founder-signoff-card {
-  margin-top: 1.5rem;
-  padding: 1.25rem 1.35rem;
+  margin-top: 1rem;
+  padding: 1.1rem 1.25rem;
   background: var(--surface-cream-alt);
   border: 1px solid var(--border-divider);
   border-radius: var(--radius-md);
@@ -1363,7 +1368,7 @@ button.btn-secondary:hover {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-navy);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .founder-badge svg {
@@ -1371,10 +1376,10 @@ button.btn-secondary:hover {
 }
 
 .founder-text {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 0.65rem;
   font-style: italic;
 }
 
@@ -1392,47 +1397,64 @@ button.btn-secondary:hover {
   color: var(--sage-border);
 }
 
+/* Blue Balanced Lead Form Card */
 .split-conversion-right {
-  background: var(--card-white);
-  border: 1px solid var(--border-divider);
+  background: var(--coastal-navy);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
-  padding: 2.5rem;
-  box-shadow: 0 20px 45px -10px rgba(26, 37, 54, 0.08);
+  padding: 1.75rem 2rem;
+  box-shadow: 0 20px 45px -10px rgba(30, 66, 101, 0.25);
+  color: #FFFFFF;
 }
 
 .magnet-form {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.85rem;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.35rem;
 }
 
-.form-group label {
+.split-conversion-right .form-group label {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.785rem;
   font-weight: 700;
-  color: var(--text-navy);
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
 }
 
-.form-input, .form-select {
+.split-conversion-right .form-input,
+.split-conversion-right .form-select {
   width: 100%;
-  padding: 0.85rem 1rem;
-  background: var(--card-white);
-  border: 1px solid var(--border-divider);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-sm);
   color: var(--text-navy);
   outline: none;
   transition: all var(--transition-fast);
 }
 
-.form-input:focus, .form-select:focus {
-  border-color: var(--text-navy);
-  box-shadow: 0 0 0 2px var(--sage-soft);
+.split-conversion-right .form-input::placeholder {
+  color: #8E9BAE;
+  font-size: 0.825rem;
+}
+
+.split-conversion-right .form-input:focus,
+.split-conversion-right .form-select:focus {
+  border-color: var(--btn-orange);
+  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.35);
 }
 
 /* ==========================================================================
@@ -1516,8 +1538,8 @@ button.btn-secondary:hover {
    Footer: Coastal Pacific Navy
    ========================================================================== */
 .footer {
-  padding: 5rem 0 2.5rem 0;
-  background: #142838;
+  padding: 4.5rem 0 2.5rem 0;
+  background: var(--coastal-navy);
   color: #FFFFFF;
 }
 
@@ -1529,7 +1551,7 @@ button.btn-secondary:hover {
 }
 
 .footer-brand p {
-  color: #A3B3C2;
+  color: #CADAE8;
   font-size: 0.95rem;
   margin-top: 1rem;
   max-width: 330px;
@@ -1553,7 +1575,7 @@ button.btn-secondary:hover {
 }
 
 .footer-links a:not(.btn) {
-  color: #A3B3C2;
+  color: #CADAE8;
   font-size: 0.9rem;
 }
 
@@ -1566,15 +1588,15 @@ button.btn-secondary:hover {
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.85rem;
-  color: #7A8E9F;
+  color: #A6BFD5;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .footer-bottom a {
-  color: #A3B3C2;
+  color: #CADAE8;
 }
 
 .footer-bottom a:hover {
@@ -1705,6 +1727,10 @@ button.btn-secondary:hover {
   .roadmap-timeline,
   .roadmap-timeline-2col {
     grid-template-columns: 1fr;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
   .nav-links {
     display: none;
