@@ -1576,6 +1576,11 @@ button.btn-secondary:hover {
   gap: 0.75rem;
 }
 
+.footer-links li {
+  color: #CADAE8;
+  font-size: 0.9rem;
+}
+
 .footer-links a:not(.btn) {
   color: #CADAE8;
   font-size: 0.9rem;
