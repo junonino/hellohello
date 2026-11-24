@@ -308,6 +308,7 @@ button.btn-secondary:hover {
 .brand-logo-img {
   height: 35px;
   width: auto;
+  max-width: 100%;
   display: block;
   object-fit: contain;
   transition: transform var(--transition-fast);
@@ -319,6 +320,7 @@ button.btn-secondary:hover {
 
 .footer-brand .brand-logo-img {
   height: 38px;
+  max-width: 220px;
 }
 
 .nav-links {
