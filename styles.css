@@ -985,27 +985,27 @@ button.btn-secondary:hover {
 }
 
 .card-negative {
-  background: linear-gradient(180deg, #3A332E 0%, #2F2925 100%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-top: 3px solid #EF4444;
-  color: #F5F5F4;
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: #F2F1ED;
+  border: 1px solid #D6D3D1;
+  border-top: 3px solid #DC2626;
+  color: #292524;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
 }
 
 .card-negative h3 {
-  color: #FFFFFF;
+  color: var(--text-ink);
 }
 
 .card-negative .comparison-item {
-  color: #E7E5E4;
+  color: #44403C;
 }
 
 .card-negative .comparison-item strong {
-  color: #FFFFFF;
+  color: var(--text-ink);
 }
 
 .card-negative .comparison-item svg {
-  color: #F87171;
+  color: #DC2626;
 }
 
 .card-positive {
@@ -1041,9 +1041,9 @@ button.btn-secondary:hover {
 }
 
 .comp-icon-neg {
-  background: rgba(239, 68, 68, 0.16);
-  color: #FCA5A5;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(220, 38, 38, 0.12);
+  color: #DC2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
 }
 
 .comp-icon-pos {
