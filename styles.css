@@ -340,9 +340,9 @@ button.btn-secondary:hover {
 }
 
 .brand-logo-img {
-  height: 35px;
+  height: 48px;
   width: auto;
-  max-width: 100%;
+  max-width: 240px;
   display: block;
   object-fit: contain;
   transition: transform var(--transition-fast);
@@ -352,8 +352,13 @@ button.btn-secondary:hover {
   transform: scale(1.02);
 }
 
+.header .brand-logo-img {
+  height: 48px;
+  max-width: 240px;
+}
+
 .footer-brand .brand-logo-img {
-  height: 38px;
+  height: 42px;
   max-width: 220px;
 }
 
@@ -980,11 +985,11 @@ button.btn-secondary:hover {
 }
 
 .card-negative {
-  background: var(--surface-dark-card);
-  border: 1px solid var(--border-dark);
+  background: linear-gradient(180deg, #3A332E 0%, #2F2925 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-top: 3px solid #EF4444;
-  color: #E7E5E4;
-  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35);
+  color: #F5F5F4;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .card-negative h3 {
@@ -992,7 +997,7 @@ button.btn-secondary:hover {
 }
 
 .card-negative .comparison-item {
-  color: #D6D3D1;
+  color: #E7E5E4;
 }
 
 .card-negative .comparison-item strong {
@@ -1773,6 +1778,10 @@ button.btn-secondary:hover {
 }
 
 @media (max-width: 768px) {
+  .header .brand-logo-img {
+    height: 40px;
+    max-width: 195px;
+  }
   .underline-accent {
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
