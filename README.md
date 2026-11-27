@@ -1,4 +1,4 @@
-# HelloHello Marketing
+# hllohllo marketing
 
 > **Local marketing for local businesses.**  
 > Helping independent local businesses show up on Google Maps, look trustworthy online, and make it easy for customers to call.
@@ -7,7 +7,7 @@
 
 ## About the Site
 
-This repository contains the static website for **HelloHello Marketing** (`hellohellomarketing.net`), built with vanilla HTML5, CSS3, and JavaScript, and designed for fast loading, zero dependencies, and hosting via GitHub Pages.
+This repository contains the static website for **hllohllo marketing** (`hllohllo.com`), built with vanilla HTML5, CSS3, and JavaScript, and designed for fast loading, zero dependencies, and hosting via GitHub Pages. Built-in technology stack powered by `hllo.you`.
 
 ---
 
@@ -16,20 +16,17 @@ This repository contains the static website for **HelloHello Marketing** (`hello
 ```text
 HelloHelloMarketing/
 ├── assets/
-│   ├── hhm-logo.png          # Main website logo (Fraunces serif)
-│   └── og-image.png          # Social preview image (1200x630, <200 KB)
-├── source/                   # Original design files (kept separate from live site bundle)
-│   ├── hhm-logo.af           # Affinity Designer source asset
-│   ├── hellohello-m.png      # Raw full-resolution graphic
-│   └── hhmm-logo.png         # Legacy sans-serif logo graphic
-├── index.html                # Main landing page
-├── privacy.html              # Privacy Policy page
-├── terms.html                # Terms of Service page
-├── styles.css                # Site stylesheet (palette, typography, layout)
-├── main.js                   # Client-side interactions (tabs, FAQ accordion, form submit)
-├── CNAME                     # Custom domain pointer (hellohellomarketing.net)
-├── .gitignore                # Git ignore configuration
-└── README.md                 # Project documentation and setup guide
+│   ├── hhlohllomktg-logo.png        # Main navbar logo (geometric sans + mascot)
+│   ├── hhlohllomktg-logo-footer.png # Inverted footer logo
+│   └── og-image.png                 # Social preview image (1200x630, <200 KB)
+├── index.html                       # Main landing page
+├── privacy.html                     # Privacy Policy page
+├── terms.html                       # Terms of Service page
+├── styles.css                       # Site stylesheet (palette, typography, layout)
+├── main.js                          # Client-side interactions & hllo.you form wiring
+├── CNAME                            # Custom domain pointer (hllohllo.com)
+├── .gitignore                       # Git ignore configuration
+└── README.md                        # Project documentation and setup guide
 ```
 
 ---

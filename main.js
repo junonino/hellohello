@@ -1,6 +1,7 @@
 /**
- * HELLOHELLO MARKETING (hellohellomarketing.net)
+ * HLLOHLLO MARKETING (hllohllo.com)
  * Core Client-Side Logic & Micro-Interactions
+ * Built-in tech stack powered by hllo.you
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,8 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('submit-plan-btn');
   const formErrorMsg = document.getElementById('form-error-msg');
 
-  // Form endpoint URL (Formspree)
-  const FORM_ENDPOINT = 'https://formspree.io/f/xvkavydv';
+  // Form endpoint: hllo.you agency endpoint (configurable via window.ENV or meta tag, with Formspree fallback)
+  const HLLO_YOU_ENDPOINT = (typeof window !== 'undefined' && window.ENV && window.ENV.HLLO_YOU_ENDPOINT)
+    || (document.querySelector('meta[name="hllo-you-endpoint"]')?.getAttribute('content'))
+    || 'https://hllo.you/f/audit-request';
+  const FALLBACK_ENDPOINT = 'https://formspree.io/f/xvkavydv';
 
   function openModal() {
     if (planModal) {
@@ -169,19 +173,30 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-        // If placeholder hasn't been configured, throw error to trigger graceful fallback
-        if (!FORM_ENDPOINT || FORM_ENDPOINT.includes('[FORM_ENDPOINT_URL]')) {
-          throw new Error('Endpoint not yet configured');
+        let response;
+        try {
+          response = await fetch(HLLO_YOU_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) {
+            throw new Error(`Endpoint returned status ${response.status}`);
+          }
+        } catch (endpointErr) {
+          // Graceful fallback to Formspree if primary hllo.you endpoint is unavailable
+          response = await fetch(FALLBACK_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
         }
-
-        const response = await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
 
         if (!response.ok) {
           throw new Error(`HTTP error ${response.status}`);
@@ -224,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.top = '80px';
         navLinks.style.left = '0';
         navLinks.style.right = '0';
-        navLinks.style.background = 'rgba(249, 248, 243, 0.98)';
+        navLinks.style.background = 'rgba(250, 249, 246, 0.98)';
         navLinks.style.padding = '2rem';
         navLinks.style.borderBottom = '1px solid var(--border-divider)';
       }
