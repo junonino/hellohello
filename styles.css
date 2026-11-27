@@ -367,8 +367,8 @@ button.btn-secondary:hover {
 }
 
 .footer-brand .brand-logo-img {
-  height: 42px;
-  max-width: 220px;
+  height: 40px;
+  max-width: 200px;
 }
 
 .nav-links {
@@ -1858,7 +1858,8 @@ button.btn-secondary:hover {
     height: 56px;
   }
 
-  .header .brand-logo-img {
+  .header .brand-logo-img,
+  .footer-brand .brand-logo-img {
     height: 34px;
     max-width: 170px;
   }
