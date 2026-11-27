@@ -985,8 +985,8 @@ button.btn-secondary:hover {
 }
 
 .card-negative {
-  background: #F2F1ED;
-  border: 1px solid #D6D3D1;
+  background: #FAF3F2;
+  border: 1px solid #EED9D7;
   border-top: 3px solid #DC2626;
   color: #292524;
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
@@ -1009,11 +1009,11 @@ button.btn-secondary:hover {
 }
 
 .card-positive {
-  background: var(--card-white);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3F9F5 100%);
   color: var(--text-ink);
-  border: 1px solid var(--border-divider);
-  border-top: 3px solid var(--btn-accent);
-  box-shadow: 0 16px 40px -10px rgba(28, 25, 23, 0.08);
+  border: 1px solid #D5E8DD;
+  border-top: 3px solid #059669;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
 }
 
 .card-positive h3 {
@@ -1021,7 +1021,15 @@ button.btn-secondary:hover {
 }
 
 .card-positive .comparison-item {
+  color: #292524;
+}
+
+.card-positive .comparison-item strong {
   color: var(--text-ink);
+}
+
+.card-positive .comparison-item svg {
+  color: #059669;
 }
 
 .comparison-card-header {
@@ -1041,14 +1049,15 @@ button.btn-secondary:hover {
 }
 
 .comp-icon-neg {
-  background: rgba(220, 38, 38, 0.12);
+  background: rgba(220, 38, 38, 0.1);
   color: #DC2626;
-  border: 1px solid rgba(220, 38, 38, 0.25);
+  border: 1px solid rgba(220, 38, 38, 0.22);
 }
 
 .comp-icon-pos {
-  background: var(--btn-orange-soft);
-  color: var(--btn-orange);
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+  border: 1px solid rgba(5, 150, 105, 0.22);
 }
 
 .comparison-list {
@@ -1072,11 +1081,11 @@ button.btn-secondary:hover {
 }
 
 .card-negative .comparison-item svg {
-  color: #F87171;
+  color: #DC2626;
 }
 
 .card-positive .comparison-item svg {
-  color: var(--btn-orange);
+  color: #059669;
 }
 
 /* ==========================================================================
