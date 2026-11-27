@@ -338,7 +338,7 @@ button.btn-secondary:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 64px;
 }
 
 .brand-logo {
@@ -349,9 +349,9 @@ button.btn-secondary:hover {
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 40px;
   width: auto;
-  max-width: 240px;
+  max-width: 200px;
   display: block;
   object-fit: contain;
   transition: transform var(--transition-fast);
@@ -362,8 +362,8 @@ button.btn-secondary:hover {
 }
 
 .header .brand-logo-img {
-  height: 48px;
-  max-width: 240px;
+  height: 40px;
+  max-width: 200px;
 }
 
 .footer-brand .brand-logo-img {
@@ -1854,9 +1854,13 @@ button.btn-secondary:hover {
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    height: 56px;
+  }
+
   .header .brand-logo-img {
-    height: 40px;
-    max-width: 195px;
+    height: 34px;
+    max-width: 170px;
   }
 
   .underline-accent {
