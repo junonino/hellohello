@@ -17,7 +17,7 @@ This repository contains the static website for **hllohllo marketing** (`hllohll
 HelloHelloMarketing/
 ├── assets/
 │   ├── hhlohllomktg-logo.png        # Main navbar logo (geometric sans + mascot)
-│   ├── hhlohllomktg-logo-footer.png # Inverted footer logo
+│   ├── hllohllo-logo-footer.png     # Inverted footer logo
 │   └── og-image.png                 # Social preview image (1200x630, <200 KB)
 ├── index.html                       # Main landing page
 ├── privacy.html                     # Privacy Policy page
