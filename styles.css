@@ -183,12 +183,12 @@ em.text-accent {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.95rem;
+  padding: 0.45rem 1.15rem;
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   background: var(--sage-soft);
   border: 1px solid var(--sage-border-subtle);
@@ -198,13 +198,13 @@ em.text-accent {
 .badge-orange,
 .badge-accent {
   background: var(--btn-accent-soft);
-  border-color: rgba(224, 62, 26, 0.25);
+  border-color: rgba(224, 62, 26, 0.28);
   color: var(--btn-accent);
 }
 
 .badge-blue {
   background: var(--btn-accent-soft);
-  border-color: rgba(224, 62, 26, 0.25);
+  border-color: rgba(224, 62, 26, 0.28);
   color: var(--btn-accent);
 }
 
@@ -214,10 +214,10 @@ em.text-accent {
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 0.25rem 0.65rem;
+  padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
   background: rgba(224, 62, 26, 0.08);
   border: 1px solid rgba(224, 62, 26, 0.25);
